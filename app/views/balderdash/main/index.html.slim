@@ -1,3 +1,9 @@
-- @widgets.each do |widget|
-  .balderdash.widget
-    = render widget
+.row
+  - @widgets.each do |widget|
+    .balderdash.widget
+      = render '/balderdash/widgets/widget', :widget => widget
+
+.row
+  - @ajax_widgets.each do |widget|
+    .balderdash.ajax.widget
+      = render '/balderdash/widgets/ajax_widget', :widget => widget
