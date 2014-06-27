@@ -1,0 +1,9 @@
+module Balderdash
+  class WidgetService
+    def self.fetch_widgets
+      r = Balderdash.constants.map{|k| Balderdash.const_get(k)}
+      puts r
+    end
+  end
+end
+       

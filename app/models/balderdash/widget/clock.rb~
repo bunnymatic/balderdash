@@ -1,0 +1,3 @@
+module Balderdash
+  module Widget
+    class Clock

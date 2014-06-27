@@ -1,0 +1,6 @@
+module Balderdash
+  class Widget
+    include ActiveModel::Conversion
+    include ActiveModel::Model
+  end
+end

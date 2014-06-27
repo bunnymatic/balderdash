@@ -1,0 +1,11 @@
+.balderdash.widget {
+  background: rgba(20,20,20,0.5);
+  width: 20%;
+  min-width: 200px;
+  float:left;
+  min-height: 200px;
+  border: 1px solid rgba(200,100,200,0.8);
+  text-align: center;
+  margin: 20px;
+  padding: 20px;
+}
