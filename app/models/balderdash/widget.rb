@@ -2,10 +2,12 @@ module Balderdash
   class Widget
     include ActiveModel::Conversion
 
-    attr_reader :id
+    attr_reader :id, :ajax_id
 
     def initialize
-      @id ||= rand(36**8).to_s(36)
+      id = rand(36**8).to_s(36)
+      @id ||= "dom_" + id
+      @ajax_id ||= "ajax_" + id
     end
 
     def ajax_url

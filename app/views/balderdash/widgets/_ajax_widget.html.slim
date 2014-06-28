@@ -1,6 +1,6 @@
 / locals :widget
 .b_widget widget here
-.widget(id = widget.id)
+.widget(id = widget.ajax_id)
   .waiting loading...
 javascript:
   document.addEventListener("DOMContentLoaded", function() {
@@ -11,9 +11,10 @@ javascript:
         console.log("Failed to fetch #{widget.class.name} widget via ajax");
         return; 
       }
-    	var element = document.getElementById('#{widget.id}');
-      element.innerHTML = r.responseText;
+    	var element = document.getElementById('#{widget.ajax_id}');
+      if (element) {
+        element.innerHTML = r.responseText;
+      }
     };
     r.send();
   });
-
